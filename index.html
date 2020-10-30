@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/baloon.ico" type="image/x-icon" />
     <title>BOOM Devs</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    <link rel="shortcut icon" href="./assets/imgs/baloon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet" />
+</head>
+
+<body>
     <header>
-      <h1 class="game-title">BOOM! Devs</h1>
-      <h2 class="game-description">estoure os balões</h2>
-      <button class="btn-init-game">Jogar</button>
+        <section class="container-controls-game">
+            <div class="container-buttons">
+                <button onclick="pause()" class="btns" id="pause">pause</button>
+                <button onclick="start()" class="btns" id="play">play</button>
+            </div>
+            <div class="content-points">
+                <p class="points">0</p>
+            </div>
+        </section>
+        <div class="blur">
+            <div class="modal-pause">
+                <h2>PAUSE MENU</h2>
+                <div class="container-texts">
+                    <button class="btns" id="btn-resume-modal">RESUME</button>
+                    <button class="btns" onclick="reloadGame()">REPLAY</button>
+                    <button class="btns" onclick="exitGame()">EXIT</button>
+                </div>
+            </div>
+        </div>
+        <h1 class="game-title title">BOOM! Devs</h1>
+        <h2 class="game-description subTitle">estoure os balões</h2>
+        <button class="btn-init-game" onclick="removeElements()">Jogar</button>
     </header>
     <section class="container-balloons"></section>
-
     <script src="./main.js"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</body>
+
 </html>
